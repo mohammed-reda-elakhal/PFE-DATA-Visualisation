@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- scripte about map box-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- css file link -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0b76549161.js" crossorigin="anonymous"></script>
+    <title>data visual</title>
+</head>
+<body>
+  <div id='map'></div>
+
+  <div class="sidebar">
+      
+    <div class='session'>
+        <h2>Casualty</h2>
+        
+    <div id="filter_c" class="row_labels">
+      <label>
+        <div class="color1"></div>
+        <input type="radio" name="casualties" value="1">
+        1 casualty
+      </label>
+      <label>
+        <div class="color2"></div>
+        <input type="radio" name="casualties" value="2">
+        2 casualty
+      </label>
+      <label>
+        <div class="color3"></div>
+        <input type="radio" name="casualties" value="3">
+        3 casualty
+      </label>
+      <label>
+        <div class="color4"></div>
+        <input type="radio" name="casualties" value="4">
+        4 casualty
+      </label>
+      <label>
+        <div class="color5"></div>
+        <input type="radio" name="casualties" value="5">
+        +5 casualty
+      </label>
+    </div>
+    </div>
+    <div class='session' id='sliderbar'>
+      <h2>Hour: <label id='active-hour'>12PM</label></h2>
+      <div class="session_sous">
+        <button id='animation-button'>Start</button>
+        <input id='slider' class='row' type='range' min='0' max='23' step='1' value='0' />
+      </div>
+    </div>
+    
+    <div class='session'>
+        <h2>Day of the week</h2>
+        <div class='row' id='filters'>
+          <div>
+            <div>
+              <input id='all' type='radio' name='toggle' value='all' >
+            <label for='all'>All</label>
+            </div>
+           <div>
+            <input type="radio" name="day" id="monday" value="Mon">
+            <label for="monday">Lundi</label>
+           </div>
+          </div>
+          <div>
+           <div>
+            <input type="radio" name="day" id="tuesday" value="Tue">
+            <label for="tuesday">Mardi</label>
+           </div>
+            <div>
+              <input type="radio" name="day" id="wednesday" value="Wed">
+            <label for="wednesday">Mercredi</label>
+            </div>
+          </div>
+         <div>
+         <div>
+          <input type="radio" name="day" id="thursday" value="Thu">
+          <label for="thursday">  Jeudi</label>
+         </div>
+         <div>
+          <input type="radio" name="day" id="friday" value="Fri">
+          <label for="friday">Vendredi</label>
+         </div>
+         </div>
+          <div>
+            <div>
+              <input type="radio" name="day" id="saturday" value="Sat">
+            <label for="saturday">Samedi</label>
+            </div>
+            <div>
+              <input type="radio" name="day" id="sunday" value="Sun">
+            <label for="sunday">Dimanche</label>
+            </div>
+          </div>
+        </div>
+        <div id="day-filter">
+        
+      </div>
+      </div>
+</div>
+
+  
+ 
+ 
+  
+ <button class="sidebar-toggle">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+    
+    <!-- script file link -->
+    <script src="script.js"></script>
+</body>
+</html>
